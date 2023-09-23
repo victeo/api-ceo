@@ -1,0 +1,30 @@
+@import './scss/variables/typography';
+@import './scss/variables/variables';
+@import './scss/variables/colors';
+@import './scss/libs/index.scss';
+@import-normalize;
+
+ 
+.body{
+    background-color: $color-white;
+    height: 100vh;
+    font-family: $raleway;
+    height: 100vh;
+
+}
+
+.container{
+    max-width: $max_width;
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main{
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100%; /* 100% da largura do pai (por padrão, o elemento <body>) */
+    margin: 0;
+    padding: 0;
+}

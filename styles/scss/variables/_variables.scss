@@ -1,0 +1,21 @@
+//
+//  Indents
+//  ---------------------------------------------
+
+$indent__base: 20px;
+
+$indent__xxl: 36px;
+$indent__xl: 32px;
+$indent__l: 28px;
+$indent__m: 24px;
+$indent__s: 16px;
+$indent__xs: 12px;
+$indent__xxs: 8px;
+
+:export {
+    indent__xxl: $indent__xxl;
+  }
+
+
+// Container
+$max_width: 1140px;
