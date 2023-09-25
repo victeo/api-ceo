@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-br">
-       < Head title={'API - CEO'} />
+       <Head title={'API - CEO'} />
             <body className='body'>
                 <Container>
                     {children}
