@@ -2,7 +2,6 @@
 
 import './globals.css'
 import { Inter } from 'next/font/google';
-import Container from "react-bootstrap/Container";
 import Head from '../../components/theme/components/CustomHead'
 
 
@@ -17,11 +16,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-br">
-       <Head title={'API - CEO'} />
+            <Head title={'API - CEO'} />
             <body className='body'>
-                <Container>
-                    {children}
-                </Container>
+                {children}
             </body>
         </html>
     )

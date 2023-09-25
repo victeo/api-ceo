@@ -12,11 +12,12 @@ import React from 'react';
  */
 export default function Image(props) {
     return (<>
-            <a href={props.url}>
-                <img
-                    src={props.info.src}
-                    alt={props.alt}
-                />
-            </a>
-        </>);
+        <a className={props.classElement} href={props.url}>
+            <img
+                className={props.classNameImg}
+                src={props.info.src}
+                alt={props.alt}
+            />
+        </a>
+    </>);
 }

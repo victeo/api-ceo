@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <HeaderCustom />
-            <div>
+            {/* <div>
                 <h1>Projeto de integração de API com React Next</h1>
                 <p>Este projeto demonstra como integrar uma API com React Next.</p>
                 <ul>
@@ -18,7 +18,7 @@ export default function Home() {
                         <a href="/post">Requisição POST</a>
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </>
 
     )

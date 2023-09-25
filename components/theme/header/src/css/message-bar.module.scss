@@ -1,0 +1,15 @@
+@import "/styles/globals.scss";
+
+
+.bar_top{
+    background-color: $primary__color;
+    padding: $indent__xxs;
+    .title{
+        font-size: $font-size__base;
+        color: $color-white;
+        margin: 0 auto;
+        text-align: center;
+      }
+}
+
+

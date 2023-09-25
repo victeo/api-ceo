@@ -1,0 +1,66 @@
+@import "/styles/globals.scss";
+
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    @include lib-css(transition, All 0.3s ease-in-out);
+
+    background: transparent;
+
+    .navbar {
+        .navbar-brand {
+            img {
+                max-width: 259px;
+            }
+        }
+
+        .container {
+            .navbar-collapse {
+                justify-content: flex-end;
+
+                .nav-item {
+                    padding: $indent__xxs $indent__xs $indent__xs - 2;
+                    margin: 0 $indent__xxs;
+                    color: #fff;
+                    background: transparent;
+                    @include lib-css(transition, All 0.3s ease-in-out);
+                    @include lib-css(border-radius, 5px);
+
+                    &.active {
+                        background: $primary__color;
+                        color: $secondary__color;
+                    }
+
+                    &:hover {
+                        background: $primary__color;
+                        color: $secondary__color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Mobile & tablet
+@media (min-width: 992px) {
+    .header-fixed {
+        .navbar {
+            .container {
+                .navbar-collapse {
+                    &.collapse {
+                        visibility: unset;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}

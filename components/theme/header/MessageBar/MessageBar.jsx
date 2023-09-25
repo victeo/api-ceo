@@ -1,4 +1,4 @@
-import styles from './message-bar.module.scss'
+import styles from '../src/css/message-bar.module.scss'
 
 /**
  *
@@ -7,9 +7,9 @@ import styles from './message-bar.module.scss'
  */
 export default function MessageBar() {
     return (
-        <>
+        <div className={styles.bar_top}>
             <p className={styles.title} >Teste de Integração da API - CEO</p>
-        </>
+        </div>
     );
 
 }

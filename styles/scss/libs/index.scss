@@ -1,10 +1,11 @@
 
 @mixin lib-css($property, $value) {
-    -webkit-#{$property}: $value;
-    -moz-#{$property}: $value;
-    -ms-#{$property}: $value;
-    -o-#{$property}: $value;
-    #{$property}: $value;
+    $prop: unquote("-#{$property}");
+    -webkit#{$prop}: #{$value};
+    -moz#{$prop}: #{$value};
+    -ms#{$prop}: #{$value};
+    -o#{$prop}: #{$value};
+    #{$prop}: #{$value};
 }
 
 $breakpoints: (
