@@ -1,12 +1,22 @@
 "use client"
-
+import Header from "../../components/theme/header/Header";
 
 export default function Home() {
     return (
         <>
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
+            <Header />
+            <div>
+                <h1>Projeto de integração de API com React Next</h1>
+                <p>Este projeto demonstra como integrar uma API com React Next.</p>
+                <ul>
+                    <li>
+                        <a href="/get">Requisição GET</a>
+                    </li>
+                    <li>
+                        <a href="/post">Requisição POST</a>
+                    </li>
+                </ul>
+            </div>
         </>
 
     )
