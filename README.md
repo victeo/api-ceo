@@ -1,15 +1,20 @@
+# Api-CEO
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Introduction
+This project aims to implement screens for testing the api of the Centro Espírita Online.
+
 ## Getting Started
+Clone the project repository to your local machine.
 
-First, run the development server:
-
+Run the following command to install the project's dependencies:
+```bash
+npm install
+```
+To start the development server and run the project locally, use the following command:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -32,3 +37,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+To access the link in the development environment [click here](https://api-ceo-victeo.vercel.app)
