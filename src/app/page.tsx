@@ -1,10 +1,11 @@
+import HeaderCustom from "../../components/theme/header/HeaderCustom";
+
 "use client"
-import Header from "../../components/theme/header/Header";
 
 export default function Home() {
     return (
         <>
-            <Header />
+            <HeaderCustom />
             <div>
                 <h1>Projeto de integração de API com React Next</h1>
                 <p>Este projeto demonstra como integrar uma API com React Next.</p>

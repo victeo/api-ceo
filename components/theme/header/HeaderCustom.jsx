@@ -1,3 +1,5 @@
+"use client"
+
 import MessageBar from "./MessageBar/MessageBar";
 import Container from "react-bootstrap/Container";
 import styles from './src/css/header.module.scss';
@@ -5,12 +7,7 @@ import logo from './src/img/logo@2x.png';
 import Img from '../components/Image'
 
 
-/**
- *
- * @returns {JSX.Element}
- * @constructor
- */
-export default function Header() {
+export default function HeaderCustom() {
     return (
         <>
             <header className="header-fixed">
