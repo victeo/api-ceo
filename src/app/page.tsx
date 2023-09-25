@@ -1,6 +1,7 @@
+"use client"
+
 import HeaderCustom from "../../components/theme/header/HeaderCustom";
 
-"use client"
 
 export default function Home() {
     return (
