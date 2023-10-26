@@ -1,4 +1,3 @@
-
 @mixin lib-css($property, $value) {
     $prop: unquote("-#{$property}");
     -webkit#{$prop}: #{$value};
@@ -9,20 +8,33 @@
 }
 
 $breakpoints: (
-  small: 320px,
-  medium: 425px,
-  large: 1240px,
-  xlarge: 1440px,
-  xxxlarge: 1920px
+    small: 320px,
+    medium: 425px,
+    large: 1240px,
+    xlarge: 1440px,
+    xxxlarge: 1920px
 );
 
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    $width: map-get($breakpoints, $breakpoint);
-    @media (min-width: $width) {
-      @content;
+    @if map-has-key($breakpoints, $breakpoint) {
+        $width: map-get($breakpoints, $breakpoint);
+
+        @media (min-width: $width) {
+            @content;
+        }
     }
-  } @else {
-    @warn "Breakpoint '#{$breakpoint}' não encontrado no mapa de breakpoints.";
-  }
+
+    @else {
+        @warn "Breakpoint '#{$breakpoint}' não encontrado no mapa de breakpoints.";
+    }
+}
+
+@mixin display($display) {
+    display: -webkit-#{$display};
+    display: -moz-#{$display};
+    display: -ms-#{$display};
+    display: -o-#{$display};
+    display: #{$display};
+
+
 }

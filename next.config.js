@@ -19,9 +19,18 @@ module.exports = withMT({
     plugins: [],
 });
 module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-    // prependData: `@import "globals.scss";`,
-  }
+    sassOptions: {
+        includePaths: [path.join(__dirname, "styles")],
+        // prependData: `@import "globals.scss";`,
+    },
+    experimental: {
+        extraAttributes: ['cz-shortcut-listen'],
+      },
 };
 
+const { i18n } = require('./next-i18next.config')
+
+module.exports = {
+    i18n
+}
+  

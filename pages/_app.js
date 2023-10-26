@@ -3,12 +3,18 @@ import '../styles/globals.css';
 import '../styles/globals.scss';
 import Head from "next/head";
 import {useEffect} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { appWithTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
+
+import i18n from '../src/i18n';
 
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
     useEffect(() => {
         // 👇 add class to body element
         document.body.classList.add('body');
+        i18n.reloadResources();
       }, []);
     
 
@@ -24,6 +30,8 @@ export default function App({ Component, pageProps }) {
                 <Component {...pageProps} />
         </>
     )
+    
   }
 
+  export default appWithTranslation(App);
 

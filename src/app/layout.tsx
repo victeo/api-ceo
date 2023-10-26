@@ -17,7 +17,7 @@ export default function RootLayout({
     return (
         <html lang="pt-br">
             <Head title={'API - CEO'} />
-            <body className='body'>
+            <body className='body' suppressHydrationWarning={true}>
                 {children}
             </body>
         </html>

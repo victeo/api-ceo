@@ -1,0 +1,50 @@
+@import "/styles/globals.scss";
+.bg-body-tertiary{
+    .navbar-collapse.collapse{
+        visibility: visible;
+
+    }
+}
+
+
+/* Estilos para tornar a navegação responsiva */
+@media (max-width: $tablet) {
+    .navbar {
+        .navbar-links {
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 56px;
+            left: 0;
+            @include lib-css(transition, All 0.3s ease-in-out);
+
+            opacity: 0;
+
+            &.active {
+                @include display(flex);
+                opacity: 1;
+                background-color: $color-gray82;
+                padding: $indent_dec $indent__base;
+            }
+
+            li {
+                margin: $indent_dec 0;
+            }
+
+        }
+        .navbar-brand{
+            .navbar-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: $h4__font-size;
+            }
+        }
+       
+    }
+
+
+   
+
+
+
+}

@@ -5,7 +5,7 @@ import styles from './src/css/header.module.scss';
 import './src/css/style.scss';
 import logo from './src/img/logo@2x.png';
 import Img from '../components/Image';
-import Carousel from '../components/CarouselCustom'
+import Carousel from '../components/CarouselCustom';
 
 
 export default function HeaderCustom() {
@@ -23,8 +23,8 @@ export default function HeaderCustom() {
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
                                 <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
-                                <a className="nav-item nav-link" href="#">Categoria</a>
-                                <a className="nav-item nav-link" href="#">Produtos</a>
+                                <a className="nav-item nav-link" href="/categoria">Categoria</a>
+                                <a className="nav-item nav-link" href="/produto">Produtos</a>
                                 <a className="nav-item nav-link" href="#">Usuários</a>
                             </div>
                         </div>

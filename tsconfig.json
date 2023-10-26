@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/theme/footer/Footer.tsx", "components/quote/Quote.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/theme/footer/Footer.tsx", "components/quote/Quote.jsx", "components/theme/header/Locale/locale-switcher.tsx"],
   "exclude": ["node_modules"]
 }
