@@ -6,7 +6,7 @@ import setPostCategory from '../../api/categoria/post'
 import { useTranslation } from 'react-i18next';
 
 
-function SearchModal() {
+function SearchModal(props) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -18,6 +18,7 @@ function SearchModal() {
     const handleSetNewCategory = () => {
         // Chame a função desejada e passe 'categoria' como parâmetro
         setPostCategory(postCategory);
+        props.updateData(postCategory);
 
         // Feche o modal ou faça qualquer outra ação necessária
         handleClose();

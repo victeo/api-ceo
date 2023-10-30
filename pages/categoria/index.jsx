@@ -1,43 +1,39 @@
-import Menu from "../../components/theme/header/menu"
-import { fetchData } from '../api/categoria/get/index';
 import React, { useState, useEffect } from 'react';
-import style from './style.scss'
+import Menu from "../../components/theme/header/menu";
+import { fetchData } from '../api/categoria/get/index';
+import style from './style.scss';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useTranslation } from 'react-i18next';
-import SearchModal from './components/SearchModal'
-import NewModal from './components/NewModal'
-import Head from "next/head";
+import SearchModal from './components/SearchModal';
+import NewModal from './components/NewModal';
+import DeleteModal from './components/DeleteModal';
 
-
-export default function index() {
-
+function Categoria() {
     const { t } = useTranslation();
-
-
     const [data, setData] = useState(null);
 
-    useEffect(() => {
-        async function fetchApiData() {
-            try {
-                const response = await fetchData();
-                setData(response);
-            } catch (error) {
-                console.error('Erro ao buscar os dados:', error);
-            }
+    async function fetchApiData(callback) {
+        try {
+            const response = await fetchData();
+            setData(response);
+            if (callback) callback(); // Chama o callback se fornecido
+        } catch (error) {
+            console.error('Erro ao buscar os dados:', error);
         }
+    }
 
+    useEffect(() => {
         fetchApiData();
     }, []);
 
+    const updateData = () => {
+        return fetchApiData();
+    }
+
     return (
         <>
-         <Head>
-                <title>Categoria</title>
-                <meta property="og:title" content="Exemplo de CRUD" />
-                <meta property="og:description" content="Exemplo de CRUD usando o react" />
-            </Head>
             <Menu />
             <Container>
                 <div className="info-box">
@@ -47,7 +43,7 @@ export default function index() {
                             <SearchModal />
                         </Col>
                         <Col xs lg="2">
-                            <NewModal />
+                            <NewModal updateData={updateData} />
                         </Col>
                     </Row>
                 </div>
@@ -58,6 +54,7 @@ export default function index() {
                                 <tr>
                                     <th>id</th>
                                     <th>Nome da categoria</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,14 +62,16 @@ export default function index() {
                                     <tr key={index}>
                                         <td>{item.id}</td>
                                         <td>{item.nome}</td>
+                                        <td><DeleteModal id={item.id} updateData={updateData} /></td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                     )}
                 </div>
-            </ Container>
-
+            </Container>
         </>
     );
 }
+
+export default Categoria;

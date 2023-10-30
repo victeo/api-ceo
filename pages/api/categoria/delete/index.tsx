@@ -6,17 +6,14 @@ type ResponseData = {
 }
 
 export default async function handler(
-    props: { body: any; },
+    props: { id: any; },
     req: NextApiRequest,
     res: NextApiResponse<ResponseData>
 ) {
-    let body = props
     try {
-        const response = await axios.post('http://20.88.41.42/api/categoria/v1', {
-            // Adicione aqui os dados que deseja enviar no corpo da requisição POST
-            "nome": body
-        });
+        const response = await axios.delete(`http://20.88.41.42/api/categoria/v1/${props}`);
     } catch (error) {
         console.error('Erro ao fazer a requisição:', error);
     }
 }
+
