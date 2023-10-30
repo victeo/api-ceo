@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import { useTranslation } from 'react-i18next';
 import SearchModal from './components/SearchModal'
 import NewModal from './components/NewModal'
+import Head from "next/head";
 
 
 export default function index() {
@@ -32,6 +33,11 @@ export default function index() {
 
     return (
         <>
+         <Head>
+                <title>Categoria</title>
+                <meta property="og:title" content="Exemplo de CRUD" />
+                <meta property="og:description" content="Exemplo de CRUD usando o react" />
+            </Head>
             <Menu />
             <Container>
                 <div className="info-box">
