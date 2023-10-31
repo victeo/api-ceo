@@ -1,0 +1,27 @@
+@import "/styles/globals.scss";
+
+
+.table {
+    width: 100%;
+
+    >thead{
+        > tr{
+
+            > th{
+                text-align: left;
+                border: 1px solid;
+                padding:$indent_dec;
+            }
+        }
+    }
+
+    >tbody {
+        >tr {
+            >td {
+                border: 1px solid;
+                padding:$indent_dec / 2 $indent_dec;
+            }
+        }
+
+    }
+}
