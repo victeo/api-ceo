@@ -19,7 +19,7 @@ type ResponseData = {
 // }
 export async function fetchData(): Promise<ResponseData> {
     try {
-        const response = await axios.get('http://20.88.41.42/api/produto/v1');
+        const response = await axios.get('/api/produto/v1/');
         return response.data;
     } catch (error) {
         throw error;

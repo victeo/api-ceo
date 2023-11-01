@@ -19,7 +19,7 @@ export default async function handler(
 ) {
     console.log(props.name)
     try {
-        const response = await axios.post('http://20.88.41.42/api/produto/v1', {
+        const response = await axios.post('/api/produto/v1/', {
             // Adicione aqui os dados que deseja enviar no corpo da requisição POST
             "nome": props.name,
             "descricao": props.description,

@@ -11,7 +11,7 @@ export default async function handler(
     res: NextApiResponse<ResponseData>
 ) {
     try {
-        const response = await axios.delete(`http://20.88.41.42/api/produto/v1/${props}`);
+        const response = await axios.delete(`/api/produto/v1/${props}`);
         window.location.reload()
 
     } catch (error) {
