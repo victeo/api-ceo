@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const nextConfig = {}
 
@@ -36,4 +35,16 @@ const { i18n } = require('./next-i18next.config')
 module.exports = {
     i18n
 }
+
+// next.config.js
+module.exports = {
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'http://20.88.41.42/api/:path*',
+        },
+      ]
+    },
+  }
   
